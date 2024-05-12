@@ -18,7 +18,7 @@ print('''
                (]]]]]]]]]]]][}}}}}}}}}}}}}}~                     =(][)     
                                                 ''')
 def loop():
-    more=input("Are there any bidders, Type 'yes' or 'No'").lower()
+    more=input("Are there any bidders, Type 'yes' or 'No\n'").lower()
     if more=="yes":
         add(bidders)
     elif more=="no":
@@ -36,8 +36,8 @@ def loop():
             loop()
         
 def add(bidders):
-    name=input("What is your Name")
-    price=int(input("What is your bid"))
+    name=input("What is your Name\n")
+    price=int(input("What is your bid\n"))
     a={}
     a["Name"]=name
     a["Price"]=price
