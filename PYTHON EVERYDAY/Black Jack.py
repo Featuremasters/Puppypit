@@ -52,8 +52,7 @@ def s():
     print(f"your final hand: {uchoice}")
     cchoice=fchoice() 
     you=add(uchoice)
-    computer=add(cchoice) 
-    if computer<17:
+    if add(cchoice)<17:
         cchoice.append(choice())
         print(f"Computer's final hand {cchoice}")
         computer=add(cchoice)
