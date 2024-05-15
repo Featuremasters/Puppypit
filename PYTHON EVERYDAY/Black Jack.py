@@ -50,14 +50,15 @@ def win(you,computer):
         print("You Lose")
 def s():
     print(f"your final hand: {uchoice}")
-    cchoice=fchoice()
-    print(f"Computer's second card {cchoice}")  
+    cchoice=fchoice() 
     you=add(uchoice)
     computer=add(cchoice) 
     if computer<17:
         cchoice.append(choice())
-        print(f"Computer's final card {cchoice}")
+        print(f"Computer's final hand {cchoice}")
         computer=add(cchoice)
+    else:
+        print(f"Computer's final hand {cchoice}") 
     win(you,computer)
 print("WELCOME TO THE BLACK JACK GAME")
 sd=True
