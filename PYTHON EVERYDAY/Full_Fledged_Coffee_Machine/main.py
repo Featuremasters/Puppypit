@@ -36,22 +36,19 @@ def water(drink):
     iwater=data.get("water")
     if resources.get("water")>=iwater:
         return True
-    else:
-        print("Sorry,There is no enough Water")
+    print("Sorry,There is no enough Water")
 def milk(drink):
     data=MENU[drink]["ingredients"]
     imilk=data.get("milk")
     if resources.get("milk")>=imilk:
         return True
-    else:
-        print("Sorry,There is no enough Milk")
+    print("Sorry,There is no enough Milk")
 def coffee(drink):
     data=MENU[drink]["ingredients"]
     icoffee=data.get("coffee")
     if resources.get("coffee")>=icoffee:
         return True
-    else:
-        print("Sorry,There is no enough Coffee")
+    print("Sorry,There is no enough Coffee")
 er=True
 while er: 
     print("Welcome to the Covai Coffee House")
@@ -104,4 +101,3 @@ while er:
                 er=False
     else:
         print("Sorry! your choice is not availble in our Menu.")
-  
