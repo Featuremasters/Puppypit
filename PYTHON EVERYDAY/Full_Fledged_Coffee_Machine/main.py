@@ -103,5 +103,5 @@ while er:
                 print("Sorry,that's not enough money.Money refunded")
                 er=False
     else:
-        print("Enter the Right Input")
+        print("Sorry! your choice is not availble in our Menu.")
   
