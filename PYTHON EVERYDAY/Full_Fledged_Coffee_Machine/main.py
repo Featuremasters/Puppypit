@@ -37,18 +37,24 @@ def water(drink):
     if resources.get("water")>=iwater:
         return True
     print("Sorry,There is no enough Water")
+    global er
+    er=False
 def milk(drink):
     data=MENU[drink]["ingredients"]
     imilk=data.get("milk")
     if resources.get("milk")>=imilk:
         return True
     print("Sorry,There is no enough Milk")
+    global er
+    er=False
 def coffee(drink):
     data=MENU[drink]["ingredients"]
     icoffee=data.get("coffee")
     if resources.get("coffee")>=icoffee:
         return True
     print("Sorry,There is no enough Coffee")
+    global er
+    er=False
 er=True
 while er: 
     print("Welcome to the Covai Coffee House")
@@ -69,18 +75,12 @@ while er:
         if choice=="espresso":
             if water("espresso") and coffee("espresso"):
                 asd=False
-            else:
-                er=False
         elif choice=="latte":
            if water("latte") and milk("latte") and coffee("latte"):
                asd=False
-           else:
-               er=False
         elif choice=="cappuccino":
             if water("cappuccino") and milk("cappuccino") and coffee("cappuccino"):
                 asd=False
-            else:
-                er=False
         if not asd:
             print("Please insert the coins, only quarters,dimes,nickles and pennies are accepted")
             quarters=int(input("How many quarter coins: "))
