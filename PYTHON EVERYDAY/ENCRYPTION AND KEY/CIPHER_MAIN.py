@@ -3,7 +3,7 @@ print(logo)
 import getpass
 def restart(r):
     if r=="yes":
-        loop(method)
+        loop()
     elif r=="no":
         pass
     else:
@@ -60,19 +60,20 @@ def decrypt():
 alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 numbers=['1','2','3','4','5','6','7','8','9','0']
 symbols=['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'," "]
-#loop(method)
-intro=True
-while  intro:
-    method=input("Type 'Encode' to encode, Type 'Decode' to Decode\n").lower()
-    if method=="encode":
-      encrypt()
-      r=input("Type 'YES' if you want to start again,otherwise type 'NO'\n").lower()
-      restart(r)
-      intro=False
-    elif method=="decode":
-        decrypt()
-        r=input("Type 'YES' if you want to start again,otherwise type 'NO'\n").lower()
-        restart(r)
-        intro=False
-    else: 
-        print("Enter the right method")
+def loop():
+    intro=True
+    while  intro:
+        method=input("Type 'Encode' to encode, Type 'Decode' to Decode\n").lower()
+        if method=="encode":
+          encrypt()
+          r=input("Type 'YES' if you want to start again,otherwise type 'NO'\n").lower()
+          restart(r)
+          intro=False
+        elif method=="decode":
+            decrypt()
+            r=input("Type 'YES' if you want to start again,otherwise type 'NO'\n").lower()
+            restart(r)
+            intro=False
+        else: 
+            print("Enter the right method")
+loop()
