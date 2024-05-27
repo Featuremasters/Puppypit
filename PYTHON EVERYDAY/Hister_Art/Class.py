@@ -26,9 +26,5 @@ class Brain:
                 self.t.forward(500)
                 self.t.setheading(0)
         def write(self):
-                self.t.penup()
-                self.t.setheading(90)
-                self.t.forward(200)
-                self.t.setheading(0)
-                self.t.forward(250)
+                self.t.goto(-150,300)
                 self.t.write("HISTER ART",move=True,align="center",font=("Arial",14,"bold"))
